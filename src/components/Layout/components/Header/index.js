@@ -14,7 +14,7 @@ function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
     setTimeout(() => {
-        // setSearchResult([1, 2, 3]);
+        setSearchResult([]);
     }, 0);
     return (
         <header className={cx('wrapper')}>
@@ -24,8 +24,11 @@ function Header() {
                     interactive
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
+                            <PopperWrapper clas>
                                 <h4 className={cx('search-title')}>Accounts</h4>
+                                <AccountItem />
+                                <AccountItem />
+                                <AccountItem />
                                 <AccountItem />
                                 <AccountItem />
                                 <AccountItem />
