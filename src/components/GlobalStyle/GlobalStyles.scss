@@ -2,39 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap');
 
 :root {
-  --primary: #fe2c55;
-  --black: #000;
-  --text-color: #333;
+    --primary: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --text-color: #333;
 
-  //Default Layout
-  --default-layout-header-height: 60px;
-  --default-layout-header-width: 1150px;
+    //Default Layout
+    --default-layout-header-height: 60px;
+    --default-layout-header-width: 1150px;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-  color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
 }
 input,
 button,
 [tabindex] {
-  outline: none;
-  border: none;
+    outline: none;
+    border: none;
 }
 a[href] {
-  color: var(--text-color);
-  text-decoration: none;
+    color: var(--text-color);
+    text-decoration: none;
 }
