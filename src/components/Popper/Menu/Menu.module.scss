@@ -1,0 +1,23 @@
+//Menu
+.menu-list {
+    width: 223px;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
+.menu-poper {
+    padding-bottom: 8px;
+}
+//Menu item
+.menu-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 11px 16px;
+    border-radius: 0;
+    font-weight: 600;
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}

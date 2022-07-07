@@ -8,6 +8,7 @@ function Button({
     to,
     href,
     primary = false,
+    normal,
     outline = false,
     text = false,
     disabled = false,
@@ -55,6 +56,7 @@ function Button({
         text,
         rounded,
         disabled,
+        normal,
     });
     return (
         <Comp className={classes} {...props}>
