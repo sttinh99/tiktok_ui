@@ -1,32 +1,32 @@
+import classNames from 'classnames/bind';
+import { useEffect, useState } from 'react';
+import 'tippy.js/dist/tippy.css'; // optional
 import {
     faChartLine,
     faCircleQuestion,
     faCircleXmark,
-    faCloudUpload,
     faCoins,
     faEllipsisVertical,
     faGear,
     faGlobe,
     faKeyboard,
-    faMagnifyingGlass,
     faPlus,
     faSignOut,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Tippy from '@tippyjs/react'; // different import path!
 import TippyHeadless from '@tippyjs/react/headless'; // different import path!
-import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
+
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
-
-import 'tippy.js/dist/tippy.css'; // optional
+import { InboxIcon, MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
 import styles from './Header.module.scss';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 const currentUser = true;
@@ -135,7 +135,7 @@ function Header() {
                         </button>
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon width="24px" height="24px" />
                         </button>
                     </div>
                 </TippyHeadless>
@@ -144,7 +144,17 @@ function Header() {
                         <>
                             <Tippy content="Upload video" placement="bottom" delay={200}>
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy content="Upload video" placement="bottom" delay={200}>
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy content="Inbox" placement="bottom" delay={200}>
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -161,10 +171,11 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {currentUser ? (
-                            <img
-                                src="https://taimienphi.vn/tmp/cf/aut/anh-gai-xinh-1.jpg"
-                                alt="doanh"
+                            <Image
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/1659600284976129.jpeg?x-expires=1657720800&x-signature=MVJzMHugbSgBkibtUNtHjxvk6gQ%3D"
+                                alt="aasds"
                                 className={cx('user-avatar')}
+                                fallback="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
